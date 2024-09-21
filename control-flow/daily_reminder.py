@@ -19,14 +19,14 @@ match priority:
         reminder = f"'{task}' has an unrecognized priority level"
 
 # Modify the reminder based on whether the task is time-bound
-if time_bound == "yes" and priority in ["high", "medium", "low"]:
-    reminder += " that requires immediate attention today!"
-elif time_bound == "no" and priority in ["high", "medium", "low"]:
-    reminder += ". Consider completing it when you have free time."
-else:
-    reminder = f"Reminder: '{task}' has an invalid priority or time-bound input."
+if priority in ["high", "medium", "low"]:
+    if time_bound == "yes":
+        reminder += " that requires immediate attention today!"
+    else:
+        reminder += ". Consider completing it when you have free time."
 
-# Print the customized reminder
-print("\nReminder:", reminder)
+# Ensure the final output starts with "Reminder: "
+print(f"Reminder: {reminder}")
+
 
 
