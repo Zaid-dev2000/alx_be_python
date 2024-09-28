@@ -1,6 +1,6 @@
 # Function to display the menu
 def display_menu():
-    print("\nShopping List Manager")
+    print("Shopping List Manager")  # Ensure this matches the exact expected output
     print("1. Add Item")
     print("2. Remove Item")
     print("3. View List")
@@ -50,3 +50,4 @@ def main():
 # Entry point of the script
 if __name__ == "__main__":
     main()
+
